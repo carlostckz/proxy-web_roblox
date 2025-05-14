@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 
 app.get("/proxy", async (req, res) => {
   const target = req.query.url;
-  if (!target) return res.send("⚠️ Passe uma URL via ?url=https://now.gg/apps/19901");
+  if (!target) return res.send("⚠️ Passe uma URL via ?url=https://google.com");
 
   try {
     const response = await fetch(target);
@@ -30,7 +30,7 @@ app.get("/proxy", async (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("🛡️ Proxy com reescrita parcial. Use /proxy?url=https://now.gg/apps/19901");
+  res.send("🛡️ Proxy com reescrita parcial. Use /proxy?url=https://google.com");
 });
 
 app.listen(PORT, () => {
